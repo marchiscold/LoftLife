@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
 }
 
 .header__body {
@@ -18,4 +19,9 @@
 
 .header__logo {
   margin-right: 60px;
+  width: 140px;
+  min-width: 140px;
+  img {
+    max-width: 100%;
+  }
 }

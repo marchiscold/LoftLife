@@ -20,6 +20,12 @@ html, body {
 }
 
 .social__item {
+  margin: 0px 7px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.social__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,17 +35,17 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0px 7px;
   width: 34px;
   height: 34px;
   border: 1px solid #fff;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.social__link {
   color: #fff;
   text-decoration: none;
+  -webkit-transition: background-color .1s linear;
+  transition: background-color .1s linear;
+}
+
+.social__link:hover {
+  background-color: #4e26fd;
 }
 
 .top-nav ul {
@@ -72,9 +78,283 @@ html, body {
   background-color: #4e26fd;
 }
 
+.hero {
+  position: relative;
+  height: 100vh;
+}
+
+.hero__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+}
+
+.hero__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  background: url("../../assets/images/hero.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.hero__bg {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  background-color: #000;
+}
+
+.hero__description {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  right: 0;
+  height: 100%;
+  color: #fff;
+  padding-left: 60px;
+  overflow: hidden;
+  z-index: 7;
+}
+
+.hero__description .hero__title {
+  margin-bottom: 40px;
+  font-family: "Bebas Neue", "Arial";
+  text-transform: uppercase;
+  font-size: 130px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  line-height: 0.8;
+}
+
+.hero__description .hero__text {
+  font-family: "Open Sans", "Arial";
+  max-width: 500px;
+  margin-bottom: 70px;
+}
+
+.hero__description .hero__shop {
+  width: 152px;
+  height: 52px;
+  border: none;
+  cursor: pointer;
+  background-color: #4e26fd;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", "Arial";
+  letter-spacing: 1px;
+  font-size: 24px;
+  color: #fff;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.hero__description .hero__shop:hover {
+  background-color: #fff;
+  color: #4e26fd;
+}
+
+.about {
+  height: 615px;
+  padding-top: 145px;
+  overflow: hidden;
+}
+
+.about__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+}
+
+.about__content .about__title {
+  font-family: "Bebas Neue", "Arial";
+  font-size: 60px;
+  letter-spacing: 5px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 0.8;
+  margin-bottom: 40px;
+}
+
+.about__content .about__text {
+  font-family: "Open Sans", "Arial";
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 45px;
+}
+
+.about__content .about__link {
+  font-family: "Open Sans", "Arial";
+  font-size: 14px;
+  font-weight: 400;
+  color: #b2b2b2;
+}
+
+.about__images {
+  width: 60%;
+  position: relative;
+}
+
+.about__images img {
+  display: block;
+  max-width: 100%;
+}
+
+.about__images .about__img-main {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.about__images .about__img-secondary {
+  position: absolute;
+  right: -110px;
+  top: -80px;
+  z-index: 5;
+}
+
+.ware__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ware-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.ware-nav__item {
+  position: relative;
+  top: 1px;
+  padding: 15px 30px;
+  font-family: "Bebas Neue", "Arial";
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+}
+
+.ware-nav__item:hover {
+  background-color: #4e26fd;
+  color: #fff;
+}
+
+.product__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.product__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 24%;
+          flex: 0 1 24%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product__item:hover {
+  border: 2px solid #4e26fd;
+}
+
+.product__item img {
+  display: block;
+  max-width: 100%;
+  border: none;
+}
+
+.product__item .product__caption {
+  font-family: "Open Sans", "Arial";
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.product__item .product__price {
+  margin-bottom: 30px;
+  font-family: "Bebas Neue", "Arial";
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #4e26fd;
+}
+
+.product__item .product__price:before {
+  content: '$';
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  font-size: 22px;
+}
+
 .container {
-  max-width: 1180px;
+  position: relative;
+  max-width: 1210px;
+  padding: 0px 15px;
   margin: 0 auto;
+  height: 100%;
 }
 
 .header {
@@ -83,6 +363,7 @@ html, body {
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
 }
 
 .header__body {
@@ -101,5 +382,11 @@ html, body {
 
 .header__logo {
   margin-right: 60px;
+  width: 140px;
+  min-width: 140px;
+}
+
+.header__logo img {
+  max-width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
