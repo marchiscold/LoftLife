@@ -1,0 +1,21 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header__body {
+  display: flex;
+  align-items: center;
+  height: 85px;
+}
+
+.header__menu {
+  margin-left: auto;
+}
+
+.header__logo {
+  margin-right: 60px;
+}
