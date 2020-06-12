@@ -1,0 +1,59 @@
+.sale__body {
+  display: flex;
+}
+
+.sale__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex: 1 1 50%;
+  background-color: #000;
+  padding: 60px 60px 40px 50px;
+  color: #fff;
+  min-width: 0;
+  overflow: hidden;
+
+  .sale__title {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: "Bebas Neue";
+    font-size: 78px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .sale__text {
+    margin-bottom: 70px;
+    font-family: "Open Sans", "Arial";
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  .sale__link {
+    display: inline-block;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 40px;
+    font-family: "Bebas Neue", "Arial";
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 2px;
+    background-color: #4e26fd;
+  }
+}
+
+.sale__bg-img {
+  flex: 1 1 50%;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
