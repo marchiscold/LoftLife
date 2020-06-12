@@ -1,12 +1,13 @@
 .blog__list {
   display: flex;
+  justify-content: space-between;
 }
 
 .blog__item {
   position: relative;
   display: block;
-  flex: 1 0 33.333%;
-  border: 2px solid transparent;
+  width: 32%;
+  border: 2px solid #ededed;
   text-decoration: none;
   padding: 30px 25px 40px;
   transition: border 0.3s ease;
@@ -42,7 +43,7 @@
 
   img {
     display: block;
-    max-width: 100%;
+    width: 100%;
   }
 
 }

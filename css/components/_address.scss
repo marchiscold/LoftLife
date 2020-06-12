@@ -1,0 +1,75 @@
+.address {
+  display: flex;
+  flex-direction: column;
+}
+
+.address__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.address__nav-item {
+  flex: 1 1 0;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Bebas Neue", "Arial";
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 10px 20px;
+
+  &:hover {
+    background-color: #4e26fd;
+  }
+}
+
+.address__tabs {
+  position: relative;
+  padding-top: 50px;
+}
+
+.address__tabs-item:not(:first-child) {
+  display: none;
+}
+
+.address__tabs-item {
+  font-family: "Open Sans", "Arial";
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.address__field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  i {
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+  }
+}
+
+.address__location {
+    i {
+    font-size: 30px;
+  }
+}
+
+.address__phone {
+  i {
+    font-size: 35px;
+  }
+}
+
+.address__email {
+  i {
+    font-size: 20px;
+  }
+}
+
