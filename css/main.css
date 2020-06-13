@@ -71,7 +71,7 @@ body {
   text-transform: uppercase;
   padding: 12px 40px;
   color: #fff;
-  font-family: 'Bebas Neue', Arial;
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 1px;
@@ -139,7 +139,7 @@ body {
 .hero__description .hero__title {
   margin-top: 140px;
   margin-bottom: 40px;
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   text-transform: uppercase;
   font-size: 130px;
   font-weight: 400;
@@ -148,7 +148,7 @@ body {
 }
 
 .hero__description .hero__text {
-  font-family: "Open Sans", "Arial";
+  font-family: "Open Sans", "Arial", "sans-serif";
   max-width: 500px;
   margin-bottom: 70px;
 }
@@ -160,7 +160,7 @@ body {
   cursor: pointer;
   background-color: #4e26fd;
   text-transform: uppercase;
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   letter-spacing: 1px;
   font-size: 24px;
   color: #fff;
@@ -204,7 +204,7 @@ body {
 }
 
 .about__content .about__title {
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-size: 60px;
   letter-spacing: 5px;
   font-weight: 400;
@@ -214,14 +214,14 @@ body {
 }
 
 .about__content .about__text {
-  font-family: "Open Sans", "Arial";
+  font-family: "Open Sans", "Arial", "sans-serif";
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 45px;
 }
 
 .about__content .about__link {
-  font-family: "Open Sans", "Arial";
+  font-family: "Open Sans", "Arial", "sans-serif";
   font-size: 14px;
   font-weight: 400;
   color: #b2b2b2;
@@ -279,7 +279,7 @@ body {
   cursor: pointer;
   top: 1px;
   padding: 15px 30px;
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 24px;
   text-transform: uppercase;
@@ -383,7 +383,7 @@ body {
 }
 
 .product__card .product__caption {
-  font-family: "Open Sans", "Arial";
+  font-family: "Open Sans", "Arial", "sans-serif";
   font-size: 16px;
   font-weight: 400;
   text-align: center;
@@ -393,7 +393,7 @@ body {
 .product__card .product__price {
   margin-top: auto;
   margin-bottom: 30px;
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 24px;
   letter-spacing: 2px;
@@ -475,7 +475,7 @@ body {
 .sale__content .sale__title {
   margin-top: 10px;
   margin-bottom: 30px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-size: 78px;
   font-weight: 400;
   letter-spacing: 4px;
@@ -486,7 +486,7 @@ body {
 
 .sale__content .sale__text {
   margin-bottom: 70px;
-  font-family: "Open Sans", "Arial";
+  font-family: "Open Sans", "Arial", "sans-serif";
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -498,7 +498,7 @@ body {
   text-transform: uppercase;
   color: #fff;
   padding: 10px 40px;
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 24px;
   letter-spacing: 2px;
@@ -519,7 +519,7 @@ body {
 .section-title {
   margin-top: 70px;
   margin-bottom: 40px;
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 60px;
   letter-spacing: 3px;
@@ -572,7 +572,7 @@ body {
           transform: translate(-50%, -50%);
   padding: 0px 20px;
   background-color: #fff;
-  font-family: "Open Sans", "Arial";
+  font-family: "Open Sans", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 14px;
   color: #b2b2b2;
@@ -608,7 +608,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #fff;
-  font-family: "Open Sans", "Arial";
+  font-family: "Open Sans", "Arial", "sans-serif";
   font-weight: 600;
   font-size: 16px;
   text-transform: uppercase;
@@ -619,7 +619,7 @@ body {
 
 .blog__title {
   margin: 20px 0px;
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 22px;
   letter-spacing: 1px;
@@ -629,7 +629,7 @@ body {
 }
 
 .blog__text {
-  font-family: "Open Sans", "Arial";
+  font-family: "Open Sans", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 14px;
   color: #000;
@@ -653,7 +653,7 @@ body {
 
 .portfolio__link a {
   display: block;
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 22px;
   letter-spacing: 2px;
@@ -768,7 +768,7 @@ body {
   border: 2px solid #fff;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-weight: 300;
   font-size: 22px;
   letter-spacing: 2px;
@@ -804,7 +804,7 @@ body {
   text-align: center;
   color: #fff;
   cursor: pointer;
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 22px;
   letter-spacing: 2px;
@@ -826,7 +826,7 @@ body {
 }
 
 .address__tabs-item {
-  font-family: "Open Sans", "Arial";
+  font-family: "Open Sans", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 1px;
@@ -888,7 +888,7 @@ body {
   text-align: center;
   color: #fff;
   cursor: pointer;
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 22px;
   letter-spacing: 2px;
@@ -910,7 +910,7 @@ body {
 }
 
 .address__tabs-item {
-  font-family: "Open Sans", "Arial";
+  font-family: "Open Sans", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 1px;
@@ -1013,7 +1013,6 @@ body {
           align-items: flex-start;
   padding-bottom: 42px;
   border-bottom: 1px solid #444;
-  color: #fff;
 }
 
 .footer__logo {
@@ -1045,7 +1044,7 @@ body {
 }
 
 .footer__link_main {
-  font-family: "Bebas Neue", "Arial";
+  font-family: "Bebas Neue", "Arial", "sans-serif";
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
@@ -1055,7 +1054,6 @@ body {
 }
 
 .footer__link_secondary {
-  font-family: "Open Sans", "Arial";
   font-size: 14px;
   font-weight: 400;
 }
@@ -1075,7 +1073,7 @@ body {
 }
 
 .footer__social h3 {
-  font-family: "Open Sans", "Arial";
+  color: #fff;
   font-weight: 400;
   font-size: 16px;
   margin-bottom: 20px;

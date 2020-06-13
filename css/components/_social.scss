@@ -27,6 +27,6 @@
   transition: background-color .1s linear;
 
   &:hover {
-    background-color: #4e26fd;
+    background-color: $color-main;
   }
 }

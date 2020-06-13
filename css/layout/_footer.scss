@@ -14,7 +14,6 @@
   align-items: flex-start;
   padding-bottom: 42px;
   border-bottom: 1px solid #444;
-  color: #fff;//TODO remove later
 }
 
 .footer__logo {
@@ -40,9 +39,9 @@
 }
 
 .footer__link_main {
-  font-family: "Bebas Neue", "Arial";
+  font-family: $bebas-neue;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: $normal;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -50,9 +49,8 @@
 }
 
 .footer__link_secondary {
-  font-family: "Open Sans", "Arial";
   font-size: 14px;
-  font-weight: 400;
+  font-weight: $normal;
 }
 
 .footer__services {
@@ -68,8 +66,8 @@
 
 .footer__social {
   h3 {
-    font-family: "Open Sans", "Arial";
-    font-weight: 400;
+    color: #fff;
+    font-weight: $normal;
     font-size: 16px;
     margin-bottom: 20px;
     padding-left: 5px;

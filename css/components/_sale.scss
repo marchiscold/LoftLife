@@ -17,7 +17,7 @@
   .sale__title {
     margin-top: 10px;
     margin-bottom: 30px;
-    font-family: "Bebas Neue";
+    font-family: $bebas-neue;
     font-size: 78px;
     font-weight: 400;
     letter-spacing: 4px;
@@ -28,7 +28,7 @@
 
   .sale__text {
     margin-bottom: 70px;
-    font-family: "Open Sans", "Arial";
+    font-family: $open-sans;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 1px;
@@ -41,11 +41,11 @@
     text-transform: uppercase;
     color: #fff;
     padding: 10px 40px;
-    font-family: "Bebas Neue", "Arial";
+    font-family: $bebas-neue;
     font-weight: 400;
     font-size: 24px;
     letter-spacing: 2px;
-    background-color: #4e26fd;
+    background-color: $color-main;
   }
 }
 

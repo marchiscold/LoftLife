@@ -15,7 +15,7 @@
   cursor: pointer;
   top: 1px;
   padding: 15px 30px;
-  font-family: "Bebas Neue", "Arial";
+  font-family: $bebas-neue;
   font-weight: 400;
   font-size: 24px;
   text-transform: uppercase;
@@ -23,7 +23,7 @@
   border: none;
 
   &:hover {
-    background-color: #4e26fd;
+    background-color: $color-main;
     color: #fff;
   }
 }

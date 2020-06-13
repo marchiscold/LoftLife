@@ -15,13 +15,13 @@
   text-transform: uppercase;
   padding: 12px 40px;
   color: #fff;
-  font-family: 'Bebas Neue', Arial;
+  font-family: $bebas-neue;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 1px;
   transition: background-color .1s linear;
 
   &:hover {
-    background-color: #4e26fd;
+    background-color: $color-main;
   }
 }

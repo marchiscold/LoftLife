@@ -71,7 +71,7 @@
   }
 
   .product__caption {
-   font-family: "Open Sans", "Arial"; 
+   font-family: $open-sans; 
    font-size: 16px;
    font-weight: 400;
    text-align: center;
@@ -81,12 +81,12 @@
   .product__price {
     margin-top: auto;
     margin-bottom: 30px;
-    font-family: "Bebas Neue", "Arial";
+    font-family: $bebas-neue;
     font-weight: 400;
     font-size: 24px;
     letter-spacing: 2px;
     text-align: center;
-    color: #4e26fd;
+    color: $color-main;
 
     &:before {
       content: '$';

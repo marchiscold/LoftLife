@@ -40,7 +40,7 @@
   .hero__title {
     margin-top: 140px;
     margin-bottom: 40px;
-    font-family: "Bebas Neue", "Arial";
+    font-family: $bebas-neue;
     text-transform: uppercase;
     font-size: 130px;
     font-weight: 400;
@@ -49,7 +49,7 @@
   }
   
   .hero__text {
-    font-family: "Open Sans", "Arial";
+    font-family: $open-sans;
     max-width: 500px;
     margin-bottom: 70px;
   }
@@ -59,9 +59,9 @@
     height: 52px;
     border: none;
     cursor: pointer;
-    background-color: #4e26fd;
+    background-color: $color-main;
     text-transform: uppercase;
-    font-family: "Bebas Neue", "Arial";
+    font-family: $bebas-neue;
     letter-spacing: 1px;
     font-size: 24px;
     color: #fff;
@@ -69,7 +69,7 @@
 
     &:hover {
       background-color: #fff;
-      color: #4e26fd;
+      color: $color-main;
     }
   }
 }

@@ -10,15 +10,15 @@
 
   a {
     display: block;
-    font-family: "Bebas Neue", "Arial";
+    font-family: $bebas-neue;
     font-weight: 400;
     font-size: 22px;
     letter-spacing: 2px;
     line-height: 1;
     text-decoration: none;
     text-transform: uppercase;
-    color: #4e26fd;
-    border: 1px solid #4e26fd;
+    color: $color-main;
+    border: 1px solid $color-main;
     padding: 10px 40px;
   }
 }
