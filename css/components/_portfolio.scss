@@ -1,6 +1,18 @@
 .portfolio__gallery {
   position: relative;
   height: 670px;
+
+  @media (max-width: $screen-lg) {
+    height: 540px;
+  }
+
+  @media (max-width: 800px) {
+    height: 450px;
+  }
+
+  @media (max-width: $screen-sm) {
+    height: 100%;
+  }
 }
 
 .portfolio__link {

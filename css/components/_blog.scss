@@ -1,6 +1,10 @@
 .blog__list {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $screen-xs) {
+    flex-direction: column;
+  }
 }
 
 .blog__item {
@@ -11,6 +15,26 @@
   text-decoration: none;
   padding: 30px 25px 40px;
   transition: border 0.3s ease;
+  
+    @media (max-width: $screen-sm) {
+      width: 49%;
+    }
+
+  @media (max-width: $screen-xs) {
+    width: 100%;
+  }
+
+  &:nth-of-type(2) {
+    @media (max-width: $screen-xs) {
+      margin-top: 20px;
+    }
+  }
+
+  &:nth-of-type(3) {
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+  }
 
   &:hover {
     border: 2px solid $color-main;
