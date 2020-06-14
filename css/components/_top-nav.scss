@@ -1,4 +1,8 @@
 .top-nav {
+  @media (max-width: $screen-lg) {
+    display: none;
+  }
+
   ul {
     list-style: none;
   }
@@ -20,6 +24,14 @@
   font-weight: 400;
   letter-spacing: 1px;
   transition: background-color .1s linear;
+
+  @media (max-width: $screen-xl) {
+    padding: 12px 30px;
+  }
+
+  @media (max-width: $screen-lg) {
+    padding: 12px 20px;
+  }
 
   &:hover {
     background-color: $color-main;

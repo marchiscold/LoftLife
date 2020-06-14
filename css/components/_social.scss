@@ -1,4 +1,12 @@
 .social {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 0;
+
+  @media (max-width: $screen-xs) {
+    display: none;
+  }
+
   ul {
     list-style: none;
   }
@@ -25,6 +33,17 @@
   color: #fff;
   text-decoration: none;
   transition: background-color .1s linear;
+
+  @media (max-width: $screen-xl) {
+    width: 36px;
+    height: 36px;
+  }
+
+  @media (max-width: $screen-sm) {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
 
   &:hover {
     background-color: $color-main;

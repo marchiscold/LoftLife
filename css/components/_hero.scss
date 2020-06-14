@@ -17,11 +17,30 @@
   flex: 1 1 0;
   background: url('../../assets/images/hero.jpg') center no-repeat; 
   background-size: cover;
+
+  @media (max-width: $screen-sm) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
 }
 
 .hero__bg {
   flex: 1 1 0;
   background-color: #000;
+  
+  @media (max-width: $screen-sm) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    opacity: 0.7;
+  }
 }
 
 .hero__description {
@@ -39,6 +58,18 @@
   overflow: hidden;
   z-index: 7;
 
+  @media (max-width: $screen-lg) {
+    padding-left: 30px;
+  }
+
+  @media (max-width: $screen-md) {
+    padding-left: 20px;
+  }
+
+  @media (max-width: $screen-sm) {
+    width: 100%;
+  }
+
   .hero__title {
     margin-bottom: 40px;
     font-family: $bebas-neue;
@@ -47,12 +78,25 @@
     font-weight: 400;
     letter-spacing: 10px;
     line-height: 0.8;
+
+    @media (max-width: $screen-xl) {
+      font-size: 100px;
+    }
+
+    @media (max-width: $screen-lg) {
+      font-size: 80px;
+    }
+
+    @media (max-width: $screen-md) {
+      font-size: 50px;
+    }
   }
   
   .hero__text {
     font-family: $open-sans;
     max-width: 500px;
     margin-bottom: 70px;
+    padding-right: 10px;
   }
 
   .hero__shop {
