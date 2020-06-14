@@ -28,17 +28,18 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: start;
   width: 50%;
   right: 0;
   height: 100%;
   color: #fff;
+  padding-top: 80px;
   padding-left: 60px;
   overflow: hidden;
   z-index: 7;
 
   .hero__title {
-    margin-top: 140px;
     margin-bottom: 40px;
     font-family: $bebas-neue;
     text-transform: uppercase;
@@ -55,9 +56,10 @@
   }
 
   .hero__shop {
-    width: 152px;
-    height: 52px;
+    display: block;
+    padding: 15px 30px;
     border: none;
+    text-decoration: none;
     cursor: pointer;
     background-color: $color-main;
     text-transform: uppercase;

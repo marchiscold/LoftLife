@@ -124,20 +124,23 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   width: 50%;
   right: 0;
   height: 100%;
   color: #fff;
+  padding-top: 80px;
   padding-left: 60px;
   overflow: hidden;
   z-index: 7;
 }
 
 .hero__description .hero__title {
-  margin-top: 140px;
   margin-bottom: 40px;
   font-family: "Bebas Neue", "Arial", "sans-serif";
   text-transform: uppercase;
@@ -154,9 +157,10 @@ body {
 }
 
 .hero__description .hero__shop {
-  width: 152px;
-  height: 52px;
+  display: block;
+  padding: 15px 30px;
   border: none;
+  text-decoration: none;
   cursor: pointer;
   background-color: #4e26fd;
   text-transform: uppercase;
@@ -982,6 +986,10 @@ body {
 
 .address__email i {
   font-size: 20px;
+}
+
+.wrapper {
+  min-width: 100vh;
 }
 
 .container {
