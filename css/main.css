@@ -1349,6 +1349,10 @@ body {
 }
 
 .address__nav-item {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
@@ -1361,6 +1365,8 @@ body {
   letter-spacing: 2px;
   line-height: 1;
   padding: 10px 20px;
+  -webkit-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 
 @media (max-width: 1023px) {
@@ -1380,16 +1386,17 @@ body {
   background-color: #4e26fd;
 }
 
+.address__nav-item.active {
+  background-color: #4e26fd;
+}
+
 .address__tabs {
   position: relative;
   padding-top: 50px;
 }
 
-.address__tabs-item:not(:first-child) {
-  display: none;
-}
-
 .address__tabs-item {
+  display: none;
   font-family: "Open Sans", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 16px;
@@ -1401,6 +1408,10 @@ body {
   .address__tabs-item {
     font-size: 15px;
   }
+}
+
+.address__tabs-item.active {
+  display: block;
 }
 
 .address__field {
@@ -1452,6 +1463,10 @@ body {
 }
 
 .address__nav-item {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
@@ -1464,6 +1479,8 @@ body {
   letter-spacing: 2px;
   line-height: 1;
   padding: 10px 20px;
+  -webkit-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 
 @media (max-width: 1023px) {
@@ -1483,16 +1500,17 @@ body {
   background-color: #4e26fd;
 }
 
+.address__nav-item.active {
+  background-color: #4e26fd;
+}
+
 .address__tabs {
   position: relative;
   padding-top: 50px;
 }
 
-.address__tabs-item:not(:first-child) {
-  display: none;
-}
-
 .address__tabs-item {
+  display: none;
   font-family: "Open Sans", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 16px;
@@ -1504,6 +1522,10 @@ body {
   .address__tabs-item {
     font-size: 15px;
   }
+}
+
+.address__tabs-item.active {
+  display: block;
 }
 
 .address__field {
