@@ -21,6 +21,8 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   border: none; 
+  user-select: none;
+  transition: background-color 0.1s linear;
 
   @media (max-width: $screen-lg) {
     font-size: 22px;
@@ -44,6 +46,11 @@
   }
 
   &:hover {
+    background-color: $color-main;
+    color: #fff;
+  }
+
+  &.active {
     background-color: $color-main;
     color: #fff;
   }

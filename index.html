@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/ware-tabs.js" type="module"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -88,15 +90,16 @@
   
           <div class="ware__nav ware-nav">
             <div class="ware-nav__list">
-              <div class="ware-nav__item">pots of concrete</div>
-              <div class="ware-nav__item">3d panels</div>
-              <div class="ware-nav__item">concrete furniture</div>
-              <div class="ware-nav__item">dining tables</div>
+              <div class="ware-nav__item active" data-tabid="#product-pots">pots of concrete</div>
+              <div class="ware-nav__item" data-tabid="#product-panels">3d panels</div>
+              <div class="ware-nav__item" data-tabid="#product-furniture">concrete furniture</div>
+              <div class="ware-nav__item" data-tabid="#product-tables">dining tables</div>
             </div>
           </div>
   
           <div class="ware__products product">
-            <div class="product__list">
+
+            <div class="product__list active" id="product-pots">
     
               <a class="product__card" href="#!">
                 <div class="product__img">
@@ -165,6 +168,239 @@
               <a class="product__card" href="#!">
                 <div class="product__img">
                   <img src="assets/images/wares/__8.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete pot Boston</div>
+                <div class="product__price">2000</div>
+              </a>
+              
+            </div><!--.product__list-->
+
+            <div class="product__list" id="product-panels">
+    
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__3.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete shelf MONOCUBE</div>
+                <div class="product__price">1000</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__3.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Countertop rectangular for dining table</div>
+                <div class="product__price">1650</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__3.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete pot Saturn</div>
+                <div class="product__price">1200</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__3.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete pot Boston</div>
+                <div class="product__price">2000</div>
+              </a>
+  
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__3.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Countertop rectangular for dining table</div>
+                <div class="product__price">1750</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__3.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Countertop rectangular for dining table</div>
+                <div class="product__price">900</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__3.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete pot Saturn</div>
+                <div class="product__price">1520</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__3.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete pot Boston</div>
+                <div class="product__price">2000</div>
+              </a>
+              
+            </div><!--.product__list-->
+            <div class="product__list" id="product-furniture">
+    
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__2.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete shelf MONOCUBE</div>
+                <div class="product__price">1000</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__2.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Countertop rectangular for dining table</div>
+                <div class="product__price">1650</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__2.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete pot Saturn</div>
+                <div class="product__price">1200</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__2.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete pot Boston</div>
+                <div class="product__price">2000</div>
+              </a>
+  
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__2.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Countertop rectangular for dining table</div>
+                <div class="product__price">1750</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__2.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Countertop rectangular for dining table</div>
+                <div class="product__price">900</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__2.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete pot Saturn</div>
+                <div class="product__price">1520</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__2.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete pot Boston</div>
+                <div class="product__price">2000</div>
+              </a>
+              
+            </div><!--.product__list-->
+
+            <div class="product__list" id="product-tables">
+    
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__1.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete shelf MONOCUBE</div>
+                <div class="product__price">1000</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__1.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Countertop rectangular for dining table</div>
+                <div class="product__price">1650</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__1.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete pot Saturn</div>
+                <div class="product__price">1200</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__1.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete pot Boston</div>
+                <div class="product__price">2000</div>
+              </a>
+  
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__1.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Countertop rectangular for dining table</div>
+                <div class="product__price">1750</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__1.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Countertop rectangular for dining table</div>
+                <div class="product__price">900</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__1.jpg" alt="ware">
+                  <div class="product__overlay"></div>
+                  <div class="product__overlay-text">See more</div>
+                </div>
+                <div class="product__caption">Concrete pot Saturn</div>
+                <div class="product__price">1520</div>
+              </a>
+              <a class="product__card" href="#!">
+                <div class="product__img">
+                  <img src="assets/images/wares/__1.jpg" alt="ware">
                   <div class="product__overlay"></div>
                   <div class="product__overlay-text">See more</div>
                 </div>
@@ -442,7 +678,7 @@
             </div>
             
             <div class="footer__divider"></div>
-            
+
             <div class="footer__social footer-social">
               <h3>We are in social networks</h3>
               <ul class="footer-social__list">
