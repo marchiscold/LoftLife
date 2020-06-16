@@ -10,6 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/ware-tabs.js" type="module"></script>
   <script src="js/contact-tabs.js" type="module"></script>
+  <script src="js/smooth-scroll.js" type="module"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -32,12 +33,12 @@
           <div class="header__menu">
             <nav class="top-nav">
               <ul class="top-nav__list">
-                <li class="top-nav__item"><a href="#" class="top-nav__link">home</a></li>
-                <li class="top-nav__item"><a href="#" class="top-nav__link">shop</a></li>
-                <li class="top-nav__item"><a href="#" class="top-nav__link">portfolio</a></li>
-                <li class="top-nav__item"><a href="#" class="top-nav__link">blog</a></li>
-                <li class="top-nav__item"><a href="#" class="top-nav__link">contact</a></li>
-                <li class="top-nav__item"><a href="#" class="top-nav__link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                <li class="top-nav__item"><a href="#home" class="top-nav__link">home</a></li>
+                <li class="top-nav__item"><a href="#shop" class="top-nav__link">shop</a></li>
+                <li class="top-nav__item"><a href="#portfolio" class="top-nav__link">portfolio</a></li>
+                <li class="top-nav__item"><a href="#blog" class="top-nav__link">blog</a></li>
+                <li class="top-nav__item"><a href="#contact" class="top-nav__link">contact</a></li>
+                <li class="top-nav__item"><a href="#!" class="top-nav__link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
               </ul>
             </nav>
           </div>
@@ -45,7 +46,7 @@
         </div><!--.header__body-->
       </div><!--.container-->
     </header>
-    <section class="hero">
+    <section class="hero" id="home">
       
       <div class="hero__body">
         <div class="hero__img"></div>
@@ -84,7 +85,7 @@
       </div><!--container-->
     </section><!--.about-->
   
-    <div class="ware">
+    <div class="ware" id="shop">
       <div class="container">
   
         <div class="ware__body">
@@ -421,13 +422,14 @@
   
         <hr class="page-divider__line">
         <div class="page-divider__arrow-wrapper">
-          <img class="page-divider__arrow" src="assets/images/icons/div-arrow.jpg"></img>
+          <a href="#sale">
+            <img class="page-divider__arrow" src="assets/images/icons/div-arrow.jpg"></img>
+          </a>
         </div>
-  
       </div>
     </div>
   
-    <section class="sale">
+    <section class="sale" id="sale">
       <div class="container">
   
         <div class="sale__body">
@@ -453,7 +455,7 @@
   
           <div class="trends__body product">
   
-            <div class="product__list">
+            <div class="product__list active">
   
               <a class="product__card" href="#!">
                 <div class="product__img">
@@ -502,7 +504,7 @@
       </div><!--.container-->
     </section><!--.trends-->
   
-    <section class="blog">
+    <section class="blog" id="blog">
       <div class="container">
   
         <div class="section-title">our blog</div>
@@ -553,7 +555,7 @@
       </div><!--.container-->
     </section><!--.blog-->
   
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container">
   
         <div class="section-title section-title_portfolio">portfolio</div>
@@ -605,7 +607,7 @@
       </div><!--.container-->
     </section><!--.portfolio-->
   
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container">
   
         <div class="section-title">contact</div>
