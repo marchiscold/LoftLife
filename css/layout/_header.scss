@@ -11,7 +11,54 @@
 .header__body {
   display: flex;
   align-items: center;
-  height: 85px;
+  height: $header-height;
+}
+
+.header__hamburger {
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (max-width: $screen-md) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span {
+    position: absolute;
+    display: block;
+    width: 90%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    transition: all 0.2s ease;
+
+    &:first-child {
+      transform: translateY(-14px);
+    }
+
+    &:last-child {
+      transform: translateY(14px);
+    }
+  }
+
+  &.active span:first-child {
+    transform: translateY(0px) rotate(45deg);
+  }
+
+  &.active span:nth-child(2) {
+    transform: scale(0);
+  }
+
+  &.active span:last-child {
+    transform: translateY(0px) rotate(-45deg);
+  }
 }
 
 .header__menu {

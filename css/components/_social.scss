@@ -3,7 +3,7 @@
   justify-content: center;
   flex: 1 1 0;
 
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-lg) {
     display: none;
   }
 
@@ -37,12 +37,6 @@
   @media (max-width: $screen-xl) {
     width: 36px;
     height: 36px;
-  }
-
-  @media (max-width: $screen-sm) {
-    width: 25px;
-    height: 25px;
-    font-size: 14px;
   }
 
   &:hover {

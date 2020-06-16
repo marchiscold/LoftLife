@@ -1,6 +1,11 @@
 .top-nav {
-  @media (max-width: $screen-lg) {
-    display: none;
+  transition: all 0.2s linear;
+  
+  @media (max-width: $screen-md) {
+    display: block;
+    position: fixed;
+    top: $header-height;
+    right: -320px;
   }
 
   ul {
@@ -9,10 +14,27 @@
   a {
     text-decoration: none;
   }
+
+  &.active {
+    @media (max-width: $screen-md) {
+      transform: translateX(-320px);
+    }
+  }
 }
 
 .top-nav__list {
   display: flex;
+
+  @media (max-width: $screen-md) {
+    flex-direction: column;
+    background-color: #000;
+  }
+}
+
+.top-nav__item {
+
+  @media (max-width: $screen-md) {
+  }
 }
 
 .top-nav__link {
@@ -30,7 +52,14 @@
   }
 
   @media (max-width: $screen-lg) {
-    padding: 12px 20px;
+    padding: 12px 25px;
+  }
+
+  @media (max-width: $screen-md) {
+    display: block;
+    font-size: 35px;
+    width: 320px;
+
   }
 
   &:hover {
