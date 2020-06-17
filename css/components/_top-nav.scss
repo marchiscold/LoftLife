@@ -1,23 +1,25 @@
 .top-nav {
-  transition: all 0.2s linear;
-  
-  @media (max-width: $screen-md) {
-    display: block;
-    position: fixed;
-    top: $header-height;
-    right: -320px;
-  }
+  transition: transform 0.2s linear;
 
+  @media (max-width: $screen-md) {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    transform: translateX(100%);
+  }
+  
   ul {
     list-style: none;
   }
   a {
     text-decoration: none;
   }
-
+  
   &.active {
     @media (max-width: $screen-md) {
-      transform: translateX(-320px);
+      visibility: visible;
+      transform: translateX(0);
     }
   }
 }
@@ -27,7 +29,7 @@
 
   @media (max-width: $screen-md) {
     flex-direction: column;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
 

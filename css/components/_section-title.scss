@@ -8,6 +8,12 @@
   line-height: 1;
   text-transform: uppercase;
   text-align: center;
+
+  @media (max-width: $screen-md) {
+    font-size: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
 }
 
 .section-title_portfolio {

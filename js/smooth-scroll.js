@@ -1,3 +1,7 @@
+$.easing.easeOutQuint = function (x, t, b, c, d) {
+  return c*((t=t/d-1)*t*t*t*t + 1) + b;
+};
+
 $('a[href^="#"]').click(function (ev) {
   let target = $(this.hash);
   let headerHeight = $('.header').height();
@@ -8,7 +12,7 @@ $('a[href^="#"]').click(function (ev) {
     $('html, body').animate({
       scrollTop: target.offset().top - headerHeight - 15
     },
-    200,
-    'linear');
+    800,
+    'easeOutQuint');
   }
 });
