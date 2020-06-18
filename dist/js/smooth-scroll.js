@@ -3,6 +3,8 @@ $.easing.easeOutQuint = function (x, t, b, c, d) {
 };
 
 $('a[href^="#"]').click(function (ev) {
+  if (this.hash == '#!') return;
+  
   let target = $(this.hash);
   let headerHeight = $('.header').height();
 

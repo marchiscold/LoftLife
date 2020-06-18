@@ -1,0 +1,95 @@
+.address {
+  display: flex;
+  flex-direction: column;
+}
+
+.address__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.address__nav-item {
+  user-select: none;
+  flex: 1 1 0;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font-family: $bebas-neue;
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 10px 20px;
+  transition: background-color 0.1s linear;
+
+  @media (max-width: $screen-lg) {
+    font-size: 20px;
+    padding: 10px 10px;
+  }
+
+  @media (max-width: $screen-xs) {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background-color: $color-main;
+  }
+
+  &.active {
+    background-color: $color-main;
+  }
+}
+
+.address__tabs {
+  position: relative;
+  padding-top: 50px;
+}
+
+.address__tabs-item {
+  display: none;
+  font-family: $open-sans;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+
+  @media (max-width: $screen-lg) {
+    font-size: 15px;
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
+.address__field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  i {
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+  }
+}
+
+.address__location {
+    i {
+    font-size: 30px;
+  }
+}
+
+.address__phone {
+  i {
+    font-size: 35px;
+  }
+}
+
+.address__email {
+  i {
+    font-size: 20px;
+  }
+}
+

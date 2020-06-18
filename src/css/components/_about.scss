@@ -1,0 +1,139 @@
+.about {
+  height: 515px;
+  padding-top: 80px;
+  overflow: hidden;
+
+  @media (max-width: $screen-lg) {
+    height: 415px;
+  }
+
+  @media (max-width: 860px) {
+    height: 650px;
+  }
+
+  @media (max-width: 630px) {
+    height: 550px;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding-top: 40px;
+    height: 500px;
+  }
+
+  @media (max-width: $screen-xs) {
+    height: 450px;
+  }
+}
+
+.about__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (max-width: 860px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+
+  @media (max-width: 860px) {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $screen-xs) {
+    margin-bottom: 20px;
+  }
+
+  .about__title {
+    font-family: $bebas-neue;
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 0.8;
+    white-space: nowrap;
+    margin-bottom: 40px;
+
+    @media (max-width: 1100px) {
+      font-size: 45px;
+    }
+
+    @media (max-width: $screen-sm) {
+      font-size: 40px;
+    }
+
+    @media (max-width: $screen-xs) {
+      font-size: 30px;
+    }
+  }
+
+  .about__text {
+    font-family: $open-sans;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 45px;
+
+    @media (max-width: 860px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .about__link {
+    font-family: $open-sans;
+    font-size: 14px;
+    font-weight: 400;
+    color: #b2b2b2;
+  }
+}
+
+.about__images {
+  width: 60%;
+  position: relative;
+  margin-right: 20px;
+
+  @media (max-width: 860px) {
+    width: 80%;
+  }
+
+  @media (max-width: $screen-xs) {
+    width: 90%;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  .about__img-main {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 80%;
+
+    @media (max-width: $screen-xs) {
+      width: 100%;
+    }
+  }
+
+  .about__img-secondary {
+    position: absolute;
+    right: 0px;
+    top: -60px;
+    width: 45%;
+    z-index: 5;
+
+    @media (max-width: $screen-lg) {
+      top: -40px;
+    }
+
+    @media (max-width: $screen-xs) {
+      display: none;
+    }
+  }
+}
