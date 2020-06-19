@@ -118,7 +118,10 @@
 }
 
 .footer__divider {
+  display: none;
+
   @media (max-width: $screen-md) {
+    display: block;
     width: 100%;
     height: 25px;
   }
