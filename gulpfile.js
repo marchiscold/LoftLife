@@ -4,6 +4,8 @@ const sass = require('gulp-sass');
 const del = require('del');
 const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
+const newer = require('gulp-newer');
+const sourcemaps = require('gulp-sourcemaps');
 
 const path =  {
   src: './src/',
@@ -16,13 +18,15 @@ function clean (done) {
 
 function sassCompile () {
   return gulp.src('./src/scss/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(path.dist + 'css'))
-    .pipe(browserSync.stream())
-    .pipe(cleanCSS())
-    .pipe(rename(function (path) {
-      path.basename += '.min';
-    }))
+    .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest(path.dist + 'css'))
+      .pipe(browserSync.stream())
+      .pipe(cleanCSS())
+      .pipe(rename(function (path) {
+        path.basename += '.min';
+      }))
+    .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest(path.dist + 'css'));
 }
 
@@ -43,7 +47,8 @@ function copyHtml () {
 function copyImg () {
   return gulp.src(path.src + 'assets/**',
                   {base: path.src})
-    .pipe(gulp.dest(path.dist))
+    .pipe(newer(path.dist + 'assets/images'))  
+    .pipe(gulp.dest(path.dist));
 }
 
 function copyFonts () {
@@ -72,3 +77,4 @@ exports.sassCompile = sassCompile;
 exports.clean = clean;
 exports.copyAll = copyAll;
 exports.copyHtml = copyHtml;
+exports.copyImg = copyImg;
