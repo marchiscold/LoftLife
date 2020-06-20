@@ -1,7 +1,14 @@
 const gulp = require('gulp');
-const server = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const del = require('del');
+const cleanCSS = require('gulp-clean-css');
+const rename = require('gulp-rename');
+
+const path =  {
+  src: './src/',
+  dist: './dist/',
+};
 
 function clean (done) {
   return del('dist', done);
@@ -10,32 +17,58 @@ function clean (done) {
 function sassCompile () {
   return gulp.src('./src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist/css'))
-    .pipe(server.stream());
+    .pipe(gulp.dest(path.dist + 'css'))
+    .pipe(browserSync.stream())
+    .pipe(cleanCSS())
+    .pipe(rename(function (path) {
+      path.basename += '.min';
+    }))
+    .pipe(gulp.dest(path.dist + 'css'));
 }
 
-function copy () {
-  return gulp.src(['./src/js/**/*.js',
-                   './src/*.html',
-                   './src/assets/**',
-                   './src/fonts/**'],
-                   {base: './src/'})
-    .pipe(gulp.dest('./dist'));
+function copyAll () {
+  return gulp.src([path.src + 'js/**/*.js',
+                   path.src + '*.html',
+                   path.src + 'assets/**',
+                   path.src + 'fonts/**'],
+                   {base: path.src})
+    .pipe(gulp.dest(path.dist));
+}
+
+function copyHtml () {
+  return gulp.src(path.src + '*.html')
+    .pipe(gulp.dest(path.dist));
+}
+
+function copyImg () {
+  return gulp.src(path.src + 'assets/**',
+                  {base: path.src})
+    .pipe(gulp.dest(path.dist))
+}
+
+function copyFonts () {
+  return gulp.src(path.src + 'fonts/**',
+                  {base: path.src})
+    .pipe(gulp.dest(path.dist))
 }
 
 function serve () {
-  server.init({
+  browserSync.init({
     server: {
-      baseDir: './dist'
+      baseDir: path.dist
     }
   });
 
-  gulp.watch('./src/scss/**/*.scss', sassCompile);
-  gulp.watch('./src/*.html').on('change', server.reload);
-  gulp.watch('./src/js/**/*.js').on('change', server.reload);
+  gulp.watch(path.src + 'scss/**/*.scss', sassCompile);
+  gulp.watch(path.src + '*.html', copyHtml);
+  gulp.watch(path.src + 'assets/**', copyImg);
+  gulp.watch(path.src + 'fonts/**', copyFonts);
+  gulp.watch(path.dist + '*.html').on('change', browserSync.reload);
+  gulp.watch(path.dist + 'js/**/*.js').on('change', browserSync.reload);
 }
 
 exports.serve = serve;
 exports.sassCompile = sassCompile;
 exports.clean = clean;
-exports.copy = copy;
+exports.copyAll = copyAll;
+exports.copyHtml = copyHtml;
