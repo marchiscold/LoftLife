@@ -11,6 +11,7 @@ const uglify = require('gulp-uglify-es').default;
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
+const plumber = require('gulp-plumber');
 
 const path =  {
   src: './src/',
@@ -23,6 +24,7 @@ function clean (done) {
 
 function compileSass () {
   return src('./src/scss/**/*.scss')
+    .pipe(plumber())
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
       .pipe(dest(path.dist + 'css'))
@@ -63,6 +65,7 @@ function copyFonts () {
 
 function compileJs () {
   return src(path.src + 'js/**/*.js')
+    .pipe(plumber())
     .pipe(sourcemaps.init())
       .pipe(babel({
         presets: ['@babel/env']
