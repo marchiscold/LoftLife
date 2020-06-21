@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const { src, dest, series, parallel, watch } = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const del = require('del');
@@ -8,6 +9,8 @@ const newer = require('gulp-newer');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify-es').default;
 const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+const autoprefixer = require('gulp-autoprefixer');
 
 const path =  {
   src: './src/',
@@ -19,69 +22,72 @@ function clean (done) {
 }
 
 function compileSass () {
-  return gulp.src('./src/scss/**/*.scss')
+  return src('./src/scss/**/*.scss')
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest(path.dist + 'css'))
+      .pipe(dest(path.dist + 'css'))
       .pipe(browserSync.stream())
+      .pipe(autoprefixer())
       .pipe(cleanCSS())
       .pipe(rename({ extname: '.min.css' }))
     .pipe(sourcemaps.write('/'))
-    .pipe(gulp.dest(path.dist + 'css'));
+    .pipe(dest(path.dist + 'css'));
 }
 
 function copyAll () {
-  return gulp.src([path.src + 'js/**/*.js',
+  return src([path.src + 'js/**/*.js',
                    path.src + '*.html',
                    path.src + 'assets/**',
                    path.src + 'fonts/**'],
                    {base: path.src})
-    .pipe(gulp.dest(path.dist));
+    .pipe(dest(path.dist));
 }
 
 function copyHtml () {
-  return gulp.src(path.src + '*.html')
-    .pipe(gulp.dest(path.dist));
+  return src(path.src + '*.html')
+    .pipe(dest(path.dist));
 }
 
 function copyImg () {
-  return gulp.src(path.src + 'assets/**',
+  return src(path.src + 'assets/**',
                   {base: path.src})
     .pipe(newer(path.dist + 'assets/images'))  
-    .pipe(gulp.dest(path.dist));
+    .pipe(dest(path.dist));
 }
 
 function copyFonts () {
-  return gulp.src(path.src + 'fonts/**',
+  return src(path.src + 'fonts/**',
                   {base: path.src})
-    .pipe(gulp.dest(path.dist))
+    .pipe(dest(path.dist))
 }
 
 function compileJs () {
-  return gulp.src(path.src + 'js/**/*.js')
+  return src(path.src + 'js/**/*.js')
     .pipe(sourcemaps.init())
       .pipe(babel({
         presets: ['@babel/env']
       }))
       .pipe(uglify())
+      .pipe(concat('script.min.js'))
     .pipe(sourcemaps.write('/map'))
-    .pipe(gulp.dest(path.dist + 'js'));
+    .pipe(dest(path.dist + 'js'));
 }
 
 function serve () {
   browserSync.init({
     server: {
-      baseDir: path.dist
+      baseDir: path.dist,
+      startPath: "index.html"
     }
   });
 
-  gulp.watch(path.src + 'scss/**/*.scss', compileSass);
-  gulp.watch(path.src + '*.html', copyHtml);
-  gulp.watch(path.src + 'assets/**', copyImg);
-  gulp.watch(path.src + 'fonts/**', copyFonts);
-  gulp.watch(path.src + 'js/**', compileJs);
-  gulp.watch(path.dist + '*.html').on('change', browserSync.reload);
-  gulp.watch(path.dist + 'js/**/*.js').on('change', browserSync.reload);
+  watch(path.src + 'scss/**/*.scss', compileSass);
+  watch(path.src + '*.html', copyHtml);
+  watch(path.src + 'assets/**', copyImg);
+  watch(path.src + 'fonts/**', copyFonts);
+  watch(path.src + 'js/**', compileJs);
+  watch(path.dist + '*.html').on('change', browserSync.reload);
+  watch(path.dist + 'js/**/*.js').on('change', browserSync.reload);
 }
 
 exports.serve = serve;
@@ -91,8 +97,8 @@ exports.copyAll = copyAll;
 exports.copyHtml = copyHtml;
 exports.copyImg = copyImg;
 exports.compileJs = compileJs;
-exports.build = gulp.series(
+exports.build = series(
   clean,
-  gulp.parallel(copyHtml, copyFonts, copyImg, compileJs, compileSass),
+  parallel(copyHtml, copyFonts, copyImg, compileJs, compileSass),
   serve
 );
