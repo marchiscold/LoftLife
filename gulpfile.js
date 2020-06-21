@@ -6,6 +6,8 @@ const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const newer = require('gulp-newer');
 const sourcemaps = require('gulp-sourcemaps');
+const uglify = require('gulp-uglify-es').default;
+const babel = require('gulp-babel');
 
 const path =  {
   src: './src/',
@@ -16,16 +18,14 @@ function clean (done) {
   return del('dist', done);
 }
 
-function sassCompile () {
+function compileSass () {
   return gulp.src('./src/scss/**/*.scss')
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
       .pipe(gulp.dest(path.dist + 'css'))
       .pipe(browserSync.stream())
       .pipe(cleanCSS())
-      .pipe(rename(function (path) {
-        path.basename += '.min';
-      }))
+      .pipe(rename({ extname: '.min.css' }))
     .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest(path.dist + 'css'));
 }
@@ -57,6 +57,17 @@ function copyFonts () {
     .pipe(gulp.dest(path.dist))
 }
 
+function compileJs () {
+  return gulp.src(path.src + 'js/**/*.js')
+    .pipe(sourcemaps.init())
+      .pipe(babel({
+        presets: ['@babel/env']
+      }))
+      .pipe(uglify())
+    .pipe(sourcemaps.write('/map'))
+    .pipe(gulp.dest(path.dist + 'js'));
+}
+
 function serve () {
   browserSync.init({
     server: {
@@ -64,17 +75,24 @@ function serve () {
     }
   });
 
-  gulp.watch(path.src + 'scss/**/*.scss', sassCompile);
+  gulp.watch(path.src + 'scss/**/*.scss', compileSass);
   gulp.watch(path.src + '*.html', copyHtml);
   gulp.watch(path.src + 'assets/**', copyImg);
   gulp.watch(path.src + 'fonts/**', copyFonts);
+  gulp.watch(path.src + 'js/**', compileJs);
   gulp.watch(path.dist + '*.html').on('change', browserSync.reload);
   gulp.watch(path.dist + 'js/**/*.js').on('change', browserSync.reload);
 }
 
 exports.serve = serve;
-exports.sassCompile = sassCompile;
+exports.compileSass = compileSass;
 exports.clean = clean;
 exports.copyAll = copyAll;
 exports.copyHtml = copyHtml;
 exports.copyImg = copyImg;
+exports.compileJs = compileJs;
+exports.build = gulp.series(
+  clean,
+  gulp.parallel(copyHtml, copyFonts, copyImg, compileJs, compileSass),
+  serve
+);
