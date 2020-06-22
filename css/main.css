@@ -112,7 +112,7 @@ body {
 
 .hero__img {
   flex: 1 1 0;
-  background: url("../../assets/images/hero.jpg") center no-repeat;
+  background: url("../images/hero.jpg") center no-repeat;
   background-size: cover; }
   @media (max-width: 575px) {
     .hero__img {
@@ -531,7 +531,7 @@ body {
 
 .sale__bg-img {
   flex: 1 1 50%;
-  background: url("../../assets/images/sale/sale.jpg") center no-repeat;
+  background: url("../images/sale/sale.jpg") center no-repeat;
   background-size: cover; }
   @media (max-width: 767px) {
     .sale__bg-img {
