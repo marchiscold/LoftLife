@@ -12,6 +12,7 @@ const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const plumber = require('gulp-plumber');
+const ghPages = require('gulp-gh-pages');
 
 const path =  {
   src: './src/',
@@ -93,6 +94,11 @@ function serve () {
   watch(path.dist + 'js/**/*.js').on('change', browserSync.reload);
 }
 
+function deploy () {
+  return src(path.dist + '**/*')
+    .pipe(ghPages());
+}
+
 exports.serve = serve;
 exports.compileSass = compileSass;
 exports.clean = clean;
@@ -100,6 +106,7 @@ exports.copyAll = copyAll;
 exports.copyHtml = copyHtml;
 exports.copyImg = copyImg;
 exports.compileJs = compileJs;
+exports.deploy = deploy;
 exports.build = series(
   clean,
   parallel(copyHtml, copyFonts, copyImg, compileJs, compileSass),
