@@ -1,3 +1,4 @@
 node_modules/
 Thumbs.db
 dist/
+.publish/

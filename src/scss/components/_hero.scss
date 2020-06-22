@@ -15,7 +15,7 @@
 
 .hero__img {
   flex: 1 1 0;
-  background: url('../../assets/images/hero.jpg') center no-repeat; 
+  background: url('../images/hero.jpg') center no-repeat; 
   background-size: cover;
 
   @media (max-width: $screen-sm) {

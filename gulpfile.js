@@ -29,10 +29,10 @@ function compileSass () {
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
       .pipe(dest(path.dist + 'css'))
-      .pipe(browserSync.stream())
       .pipe(autoprefixer())
       .pipe(cleanCSS())
       .pipe(rename({ extname: '.min.css' }))
+      .pipe(browserSync.stream())
     .pipe(sourcemaps.write('/'))
     .pipe(dest(path.dist + 'css'));
 }
@@ -40,7 +40,7 @@ function compileSass () {
 function copyAll () {
   return src([path.src + 'js/**/*.js',
                    path.src + '*.html',
-                   path.src + 'assets/**',
+                   path.src + 'images/**',
                    path.src + 'fonts/**'],
                    {base: path.src})
     .pipe(dest(path.dist));
@@ -52,9 +52,9 @@ function copyHtml () {
 }
 
 function copyImg () {
-  return src(path.src + 'assets/**',
+  return src(path.src + 'images/**',
                   {base: path.src})
-    .pipe(newer(path.dist + 'assets/images'))  
+    .pipe(newer(path.dist + 'images'))  
     .pipe(dest(path.dist));
 }
 
@@ -87,7 +87,7 @@ function serve () {
 
   watch(path.src + 'scss/**/*.scss', compileSass);
   watch(path.src + '*.html', copyHtml);
-  watch(path.src + 'assets/**', copyImg);
+  watch(path.src + 'images/**', copyImg);
   watch(path.src + 'fonts/**', copyFonts);
   watch(path.src + 'js/**', compileJs);
   watch(path.dist + '*.html').on('change', browserSync.reload);
@@ -109,6 +109,5 @@ exports.compileJs = compileJs;
 exports.deploy = deploy;
 exports.build = series(
   clean,
-  parallel(copyHtml, copyFonts, copyImg, compileJs, compileSass),
-  serve
+  parallel(copyHtml, copyFonts, copyImg, compileJs, compileSass)
 );
